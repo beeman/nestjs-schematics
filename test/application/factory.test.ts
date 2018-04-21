@@ -50,7 +50,7 @@ describe('Application Factory', () => {
       '/awesome-project/tslint.json'
     ]);
   });
-  it.skip('should manage js language', () => {
+  it('should manage js language', () => {
     const options: ApplicationOptions = {
       name: 'project',
       language: 'js'
@@ -63,8 +63,8 @@ describe('Application Factory', () => {
       '/project/README.md',
       '/project/nodemon.json',
       '/project/package.json',
-      '/project/src/app.controller.spec.js',
       '/project/src/app.controller.js',
+      '/project/src/app.controller.spec.js',
       '/project/src/app.module.js',
       '/project/src/main.js',
       '/project/test/app.e2e-spec.js',
