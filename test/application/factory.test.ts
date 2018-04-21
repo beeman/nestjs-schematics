@@ -50,4 +50,27 @@ describe('Application Factory', () => {
       '/awesome-project/tslint.json'
     ]);
   });
+  it.skip('should manage js language', () => {
+    const options: ApplicationOptions = {
+      name: 'project',
+      language: 'js'
+    };
+    const tree: UnitTestTree = runner.runSchematic('application', options, new VirtualTree());
+    const files: string[] = tree.files;
+    expect(files).to.be.deep.equal([
+      '/project/.nestcli.json',
+      '/project/.prettierrc',
+      '/project/README.md',
+      '/project/nodemon.json',
+      '/project/package.json',
+      '/project/src/app.controller.spec.js',
+      '/project/src/app.controller.js',
+      '/project/src/app.module.js',
+      '/project/src/main.js',
+      '/project/test/app.e2e-spec.js',
+      '/project/test/jest-e2e.json',
+      '/project/tsconfig.json',
+      '/project/tslint.json'
+    ]);
+  });
 });

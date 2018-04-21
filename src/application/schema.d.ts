@@ -12,6 +12,10 @@ export interface ApplicationOptions {
    */
   name: string;
   /**
+   * The NestJS main language configuration
+   */
+  language?: string;
+  /**
    * The NestJS application version.
    */
   version?: string;
