@@ -1,7 +1,7 @@
 import { strings } from '@angular-devkit/core';
 import { apply, mergeWith, move, Rule, Source, template, url } from '@angular-devkit/schematics';
-import { ApplicationOptions } from './schema';
 import { join } from 'path';
+import { ApplicationOptions } from './schema';
 
 export function main(options: ApplicationOptions): Rule {
   options = transform(options);
